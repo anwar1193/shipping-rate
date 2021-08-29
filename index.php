@@ -63,8 +63,8 @@ foreach($result['rajaongkir']['results'] as $kotaa){
 
                   <div class="form-group">
                     <label>Kota Asal</label>
-                    <select class="form-control form-control-sm" name="kota_asal">
-                      <option>-Pilih Kota-</option>
+                    <select class="form-control form-control-sm" name="kota_asal" required="">
+                      <option value="">-Pilih Kota-</option>
                       <?php foreach(array_combine($kota,$kotaId) as $city => $cityId) : ?>
                       <option value="<?php echo $cityId; ?>"><?php echo $city; ?></option>
                     <?php endforeach; ?>
@@ -73,8 +73,8 @@ foreach($result['rajaongkir']['results'] as $kotaa){
 
                   <div class="form-group">
                     <label>Kota Tujuan</label>
-                    <select class="form-control form-control-sm" name="kota_tujuan">
-                      <option>-Pilih Kota-</option>
+                    <select class="form-control form-control-sm" name="kota_tujuan" required="">
+                      <option value="">-Pilih Kota-</option>
                       <?php foreach(array_combine($kota, $kotaId) as $city=> $cityId) : ?>
                       <option value="<?php echo $cityId; ?>"><?php echo $city; ?></option>
                     <?php endforeach; ?>
@@ -83,13 +83,13 @@ foreach($result['rajaongkir']['results'] as $kotaa){
 
                   <div class="form-group">
                     <label>Berat (Dalam Gram)</label>
-                    <input type="text" class="form-control form-control-sm" name="berat" placeholder="Masukan Berat">
+                    <input type="text" class="form-control form-control-sm" name="berat" placeholder="Masukan Berat" required="">
                   </div>
 
                   <div class="form-group">
                     <label>Kurir</label>
-                    <select name="kurir" class="form-control form-control-sm">
-                      <option>-Pilih Kurir-</option>
+                    <select name="kurir" class="form-control form-control-sm" required="">
+                      <option value="">-Pilih Kurir-</option>
                       <option value="jne">JNE</option>
                       <option value="tiki">TIKI</option>
                       <option value="pos">POS</option>
